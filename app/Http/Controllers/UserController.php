@@ -75,7 +75,7 @@ class UserController extends Controller
     {
         $updated = $this->objUser->where('id', $id)->update($request->except(['_token', '_method']));
         if ($updated) {
-            return redirect()->back()->with('success', 'Atualizado com sucesso!');
+            return redirect()->to('/users')->with('success', 'Atualizado com sucesso!');
         }
         return redirect()->back()->with('success', 'Ocorreu um erro tente novamente');
     }
