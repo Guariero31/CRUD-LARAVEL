@@ -29,7 +29,8 @@
                 <li class="py-3 flex justify-between items-center">
                     <p class="text-lg font-semibold">{{ $user->name }}</p>
                     <div class="flex text-lg font-bold gap-2">
-                        <a href="{{ route('users.show', ['user' => $user->id]) }}" class="text-blue-600">Visualizar</a> |
+                        <a href="{{ route('users.show', ['user' => $user->id]) }}" class="text-blue-600">Visualizar</a>
+                        |
                         <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="text-green-600">Editar</a> |
                         <form action="{{ route('users.destroy', ['user' => $user->id]) }}" method="POST" class="inline">
                             @csrf
